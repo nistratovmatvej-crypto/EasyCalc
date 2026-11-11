@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6d45c5">
+  <title>EasyCalc</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="brand">EasyCalc</div><div class="subtitle">Простой и умный калькулятор</div></header>
+    <section class="calculator">
+      <input id="display" class="display" aria-label="Экран калькулятора" value="0" readonly>
+      <div class="keys" id="keys">
+        <button data-action="clear" class="muted">AC</button><button data-value="(">(</button><button data-value=")">)</button><button data-action="back">⌫</button>
+        <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button data-value="/" class="operator">÷</button>
+        <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button data-value="*" class="operator">×</button>
+        <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button data-value="-" class="operator">−</button>
+        <button data-value="0">0</button><button data-value=".">.</button><button data-action="equals" class="equal">=</button><button data-value="+" class="operator">+</button>
+      </div>
+    </section>
+    <section class="ai">
+      <h2>Calculate — ИИ-помощник</h2>
+      <p>Напиши пример или попроси объяснить решение.</p>
+      <textarea id="question" rows="3" placeholder="Например: объясни, как решить 25 × 16"></textarea>
+      <button id="ask" class="ask">Спросить Calculate</button>
+      <div id="answer" class="answer" aria-live="polite"></div>
+    </section>
+    <footer>EasyCalc · Калькулятор и помощник</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
